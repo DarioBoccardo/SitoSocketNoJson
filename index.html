@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Definisce la codifica dei caratteri e la visualizzazione responsiva della pagina -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
+    <!-- Titolo della pagina visualizzato nella scheda del browser -->
+    <title>Le socket nell'informatica</title>
+    <!-- Link a Bootstrap per la stilizzazione della pagina -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link al foglio di stile personalizzato (style.css) -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Barra di navigazione -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
+            <!-- Logo e link alla home -->
             <a class="navbar-brand" href="index.html">Socket e Reti</a>
+            <!-- Bottone per visualizzare il menu a tendina nelle versioni mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Menu di navigazione con i collegamenti alle altre pagine del sito -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -27,42 +34,56 @@
         </div>
     </nav>
 
-    <div class="container my-5" id = "content">
+    <!-- Contenuto principale della pagina -->
+    <div class="container my-5" id="content">
+        <!-- Titolo principale della sezione -->
         <h1 class="text-center">Socket e Reti</h1>
+        <!-- Descrizione introduttiva della pagina, che spiega gli argomenti trattati nel sito -->
         <p class="lead text-center">In questo sito esploreremo il funzionamento delle socket di rete e i concetti chiave che le circondano. Imparerai come i dispositivi comunicano tra loro attraverso Internet e le reti locali, utilizzando protocolli di comunicazione come TCP e UDP, e come questi concetti sono legati al modello OSI.</p>
 
+        <!-- Linea orizzontale per separare le sezioni -->
         <hr class="my-4">
 
+        <!-- Sezione su cosa è una socket -->
         <h2>Cos'è una Socket?</h2>
         <p>Una socket è un punto finale per la comunicazione tra due sistemi su una rete. Essa funge da canale attraverso il quale i dati vengono inviati e ricevuti. Ogni socket è identificata da un indirizzo IP e un numero di porta, che la rendono unica all'interno della rete.</p>
+        <!-- Link alla pagina dettagliata sulle socket -->
         <p>Per scoprire di più su cosa sono le socket e come funzionano, visita la nostra <a href="socket.html">pagina sulle Socket</a>.</p>
 
+        <!-- Linea orizzontale per separare le sezioni -->
         <hr class="my-4">
 
+        <!-- Sezione sul Modello OSI -->
         <h2>Il Modello OSI</h2>
         <p>Il Modello OSI è una struttura a sette livelli che descrive come i dati vengono trasmessi attraverso una rete. Ogni livello ha una funzione specifica, che va dalla trasmissione fisica dei dati fino alla presentazione dei dati all'utente finale.</p>
+        <!-- Link alla pagina dettagliata sul Modello OSI -->
         <p>Scopri di più su come il Modello OSI interagisce con le socket e il funzionamento delle comunicazioni nelle reti visitando la nostra <a href="osi.html">pagina sul Modello OSI</a>.</p>
 
+        <!-- Linea orizzontale per separare le sezioni -->
         <hr class="my-4">
 
+        <!-- Sezione su TCP vs UDP -->
         <h2>TCP vs UDP</h2>
         <p>I protocolli TCP e UDP sono utilizzati per gestire la comunicazione tra i dispositivi a livello di trasporto. Mentre TCP è affidabile e garantisce la consegna dei dati, UDP è più veloce ma non garantisce la stessa affidabilità.</p>
+        <!-- Link alla pagina che esplora le differenze tra TCP e UDP -->
         <p>Approfondisci le differenze tra questi due protocolli nella nostra <a href="tcp_udp.html">pagina TCP vs UDP</a>.</p>
 
+        <!-- Linea orizzontale per separare le sezioni -->
         <hr class="my-4">
 
+        <!-- Sezione sul Glossario -->
         <h2>Glossario dei Termini Tecnici</h2>
         <p>Per comprendere meglio i concetti trattati in questo sito, visita il nostro <a href="glossario.html">glossario</a> che contiene le definizioni dei principali termini tecnici relativi alle socket, ai protocolli di rete, e al modello OSI.</p>
     </div>
 
     <!-- Footer -->
-    <div class = "footer">
+    <div class="footer">
         <footer class="bg-dark text-white text-center py-3 mt-5">
             <p>Dario Boccardo - 5°E</p>
         </footer>
     </div>
 
-    <!-- Bootstrap Script -->
+    <!-- Inclusione dello script Bootstrap per abilitare funzionalità come il menu a tendina su mobile -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

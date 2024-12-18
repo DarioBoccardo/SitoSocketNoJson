@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Definisce la codifica dei caratteri per la pagina -->
     <meta charset="UTF-8">
+    
+    <!-- Rende la pagina responsiva su dispositivi mobili adattando la larghezza al dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titolo della pagina che appare nella barra del browser -->
     <title>TCP vs UDP</title>
+    
+    <!-- Link per il foglio di stile di Bootstrap per rendere la pagina visivamente più attraente e responsive -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Link al file CSS personalizzato -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar: barra di navigazione in alto con collegamenti tra le pagine -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
+            <!-- Logo e link alla pagina principale -->
             <a class="navbar-brand" href="index.html">Socket e Reti</a>
+            <!-- Bottone per mostrare/nascondere la navbar su dispositivi mobili -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Menu di navigazione che si espande su schermi più grandi -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
+                    <!-- Collegamenti alle varie pagine -->
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
                     <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
@@ -27,9 +40,11 @@
         </div>
     </nav>
 
-    <!-- Contenuto -->
-    <div class="container mt-5" id = "content">
+    <!-- Contenuto principale della pagina -->
+    <div class="container mt-5" id="content">
         <h1>TCP vs UDP</h1>
+
+        <!-- Sezione con le caratteristiche di TCP -->
         <section class="mt-4">
             <h2>Caratteristiche di TCP</h2>
             <ul>
@@ -39,6 +54,8 @@
                 <li><strong>Uso:</strong> Ideale per applicazioni come email, trasferimento file (FTP), e navigazione web (HTTP).</li>
             </ul>
         </section>
+
+        <!-- Sezione con le caratteristiche di UDP -->
         <section class="mt-4">
             <h2>Caratteristiche di UDP</h2>
             <ul>
@@ -47,17 +64,21 @@
                 <li><strong>Uso:</strong> Ideale per applicazioni in tempo reale come streaming video, VoIP, e giochi online.</li>
             </ul>
         </section>
+
+        <!-- Sezione con una tabella che confronta TCP e UDP -->
         <section class="mt-4">
             <h2>Confronto tra TCP e UDP</h2>
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <!-- Intestazioni delle colonne nella tabella -->
                         <th>Caratteristica</th>
                         <th>TCP</th>
                         <th>UDP</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Righe della tabella che confrontano le caratteristiche dei due protocolli -->
                     <tr>
                         <td>Tipo di connessione</td>
                         <td>Orientata alla connessione</td>
@@ -88,12 +109,12 @@
         </section>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer: piè di pagina con il nome dell'autore -->
     <footer class="bg-dark text-white text-center py-3 mt-5 footer">
         <p>Dario Boccardo - 5°E</p>
     </footer>
 
-    <!-- Bootstrap Script -->
+    <!-- Script di Bootstrap per il funzionamento delle funzionalità interattive (es. il menu a discesa) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

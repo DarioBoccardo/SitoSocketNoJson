@@ -1,10 +1,15 @@
+/* Imposta l'altezza dell'elemento html e del body al 100% della finestra del browser */
 html, body {
     height: 100%;
 }
+
+/* Definisce il layout del body come un contenitore flex */
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organizza gli elementi figli in una colonna (verticalmente) */
 }
+
+/* Imposta l'elemento con l'id 'content' per occupare lo spazio rimanente nel contenitore flex */
 #content {
-    flex: 1;
+    flex: 1; /* Consente all'elemento #content di espandersi per occupare lo spazio disponibile */
 }
