@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP vs UDP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Socket e Reti</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="TCP_UDP.html">TCP vs UDP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossario.html">Glossario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenuto -->
+    <div class="container mt-5" id = "content">
+        <h1>TCP vs UDP</h1>
+        <section class="mt-4">
+            <h2>Caratteristiche di TCP</h2>
+            <ul>
+                <li><strong>Affidabilità:</strong> TCP garantisce che i dati vengano consegnati in modo affidabile e nell'ordine corretto.</li>
+                <li><strong>Connessione:</strong> TCP richiede una connessione stabilita tra client e server prima della trasmissione.</li>
+                <li><strong>Controllo del flusso:</strong> Gestisce la velocità di invio dei dati per evitare sovraccarichi.</li>
+                <li><strong>Uso:</strong> Ideale per applicazioni come email, trasferimento file (FTP), e navigazione web (HTTP).</li>
+            </ul>
+        </section>
+        <section class="mt-4">
+            <h2>Caratteristiche di UDP</h2>
+            <ul>
+                <li><strong>Velocità:</strong> UDP è più rapido di TCP poiché non richiede connessione e non garantisce l'ordine dei pacchetti.</li>
+                <li><strong>Affidabilità:</strong> Non garantisce la consegna dei dati, quindi i pacchetti possono andare persi.</li>
+                <li><strong>Uso:</strong> Ideale per applicazioni in tempo reale come streaming video, VoIP, e giochi online.</li>
+            </ul>
+        </section>
+        <section class="mt-4">
+            <h2>Confronto tra TCP e UDP</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Caratteristica</th>
+                        <th>TCP</th>
+                        <th>UDP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tipo di connessione</td>
+                        <td>Orientata alla connessione</td>
+                        <td>Senza connessione</td>
+                    </tr>
+                    <tr>
+                        <td>Affidabilità</td>
+                        <td>Affidabile</td>
+                        <td>Non affidabile</td>
+                    </tr>
+                    <tr>
+                        <td>Velocità</td>
+                        <td>Più lenta</td>
+                        <td>Molto veloce</td>
+                    </tr>
+                    <tr>
+                        <td>Ordine dei dati</td>
+                        <td>Garantito</td>
+                        <td>Non garantito</td>
+                    </tr>
+                    <tr>
+                        <td>Applicazioni</td>
+                        <td>FTP, HTTP, email</td>
+                        <td>Streaming, VoIP, gaming</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5 footer">
+        <p>Dario Boccardo - 5°E</p>
+    </footer>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

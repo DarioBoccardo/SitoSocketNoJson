@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Socket e Reti</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="socket.html">Socket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="TCP_UDP.html">TCP vs UDP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossario.html">Glossario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenuto -->
+    <div class="container my-5" id = "content">
+        <h1 class="text-center">Introduzione alle Socket</h1>
+
+        <h2>Cos'è una Socket?</h2>
+        <p>
+            Una <strong>socket</strong> è un'interfaccia software che consente la comunicazione tra due dispositivi attraverso una rete. Le socket sono utilizzate per inviare e ricevere dati su reti di computer, come Internet. Ogni socket è identificata da un indirizzo IP e una porta specifica, che insieme definiscono un "endpoint" di comunicazione.
+        </p>
+        <p>
+            Le socket possono essere utilizzate per vari scopi, inclusi i trasferimenti di file, la messaggistica istantanea e la navigazione web. Esse operano tipicamente in due modalità: <strong>streaming</strong> o <strong>datagramma</strong>, a seconda del protocollo di rete scelto (TCP o UDP).
+        </p>
+
+        <h2>Tipologie di Socket</h2>
+        <p>
+            Le socket si classificano in due categorie principali, che sono legate ai protocolli di rete utilizzati per la comunicazione:
+        </p>
+        <h3>1. Stream Socket (TCP)</h3>
+        <p>
+            Le socket di tipo <strong>stream</strong> utilizzano il protocollo di comunicazione <strong>TCP</strong> (Transmission Control Protocol), che garantisce una trasmissione affidabile dei dati. Con una socket di tipo stream, i dati vengono inviati in una sequenza continua e devono essere ricevuti nello stesso ordine in cui sono stati inviati. TCP assicura che:
+        </p>
+        <ul>
+            <li>I dati arrivino senza errori.</li>
+            <li>Vengano ricevuti in ordine.</li>
+            <li>Non ci siano duplicazioni di dati.</li>
+            <li>Se un pacchetto di dati viene perso, venga ritrasmesso.</li>
+        </ul>
+        <p>
+            Le applicazioni che richiedono alta affidabilità, come il <strong>web</strong> (HTTP) o la <strong>posta elettronica</strong> (SMTP), utilizzano spesso questo tipo di socket.
+        </p>
+
+        <h3>2. Datagram Socket (UDP)</h3>
+        <p>
+            Le socket di tipo <strong>datagramma</strong> utilizzano il protocollo <strong>UDP</strong> (User Datagram Protocol), che è più veloce ma meno affidabile rispetto al TCP. UDP invia i pacchetti di dati senza garantire che arrivino correttamente, né in ordine né senza duplicazioni. Questo lo rende ideale per applicazioni in tempo reale come il <strong>voip</strong> (Voice over IP) o lo streaming video, dove la velocità è più importante della perfetta affidabilità.
+        </p>
+        <p>
+            UDP è utilizzato in scenari dove la perdita di alcuni pacchetti non è critica e la velocità di trasmissione deve essere prioritaria. Ad esempio:
+        </p>
+        <ul>
+            <li>Streaming audio e video (es. YouTube, Netflix)</li>
+            <li>Videogiochi online</li>
+            <li>Chiamate VoIP</li>
+        </ul>
+
+        <h2>Processo di Comunicazione con le Socket</h2>
+        <p>
+            Una comunicazione tra due dispositivi tramite socket avviene in più fasi, che coinvolgono sia il <strong>server</strong> che il <strong>client</strong>. Ecco un flusso tipico di comunicazione:
+        </p>
+        <h3>Fasi di Comunicazione</h3>
+        <ol>
+            <li><strong>Creazione della Socket:</strong> Prima di tutto, sia il client che il server creano una socket. Il server crea una socket in ascolto su una porta specifica e su un indirizzo IP, pronto ad accettare le connessioni in arrivo.</li>
+            <li><strong>Connessione Client-Server:</strong> Il client stabilisce una connessione con il server utilizzando l'indirizzo IP e la porta del server. Per i socket di tipo stream (TCP), questa connessione è orientata alla connessione, e il server accetta o rifiuta la connessione a seconda della disponibilità.</li>
+            <li><strong>Comunicazione:</strong> Una volta stabilita la connessione, il client e il server possono scambiarsi dati. Il server ascolta continuamente le richieste dei client, mentre i client inviano richieste al server e attendono risposte.</li>
+            <li><strong>Chiusura della Connessione:</strong> Quando la comunicazione è terminata, entrambe le parti chiudono la connessione, liberando le risorse. Il client e il server inviano messaggi di chiusura per segnare la fine della sessione.</li>
+        </ol>
+        
+        <h2>Alcuni Esempi di Utilizzo delle Socket</h2>
+        <p>
+            Le socket sono utilizzate in molti scenari di rete. Ecco alcuni esempi comuni di applicazione:
+        </p>
+        <ul>
+            <li><strong>HTTP</strong>: Quando un browser web si connette a un server per caricare una pagina web, utilizza una socket per la comunicazione tra il client e il server.</li>
+            <li><strong>FTP</strong>: Il File Transfer Protocol (FTP) utilizza le socket per trasferire file tra client e server su una rete.</li>
+            <li><strong>Telnet</strong>: Le socket sono utilizzate anche in Telnet, un protocollo che permette di accedere a un computer remoto attraverso la rete.</li>
+            <li><strong>Chiamate VoIP</strong>: I software di comunicazione come Skype utilizzano le socket per inviare pacchetti di voce in tempo reale tramite UDP.</li>
+        </ul>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5 footer">
+        <p>Dario Boccardo - 5°E</p>
+    </footer>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
